@@ -3,7 +3,6 @@
 
 from flask import Flask, send_file, abort, Response, jsonify, request, redirect, url_for, session, escape, render_template, g, flash
 from flask.ext.sqlalchemy import SQLAlchemy
-from flask.ext.bcrypt import Bcrypt
 from flask.ext.assets import Environment, Bundle
 
 from datetime import datetime
@@ -14,7 +13,7 @@ app.config.from_object('application.applicationConfig')
 
 
 db = SQLAlchemy(app)
-bcrypt = Bcrypt(app)
+
 assets = Environment(app)
 
 app.jinja_env.trim_blocks = True
