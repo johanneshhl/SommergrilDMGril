@@ -33,6 +33,8 @@ SECRET_KEY = u'\x89\x15\xbe\x8c\x93\xf0k\xee\x91\xe0\xae\xba\xb3?\xdc\xa9\xe1ns8
 #set up localhost usage
 if not os.environ.has_key('DATABASE_URL'):
 	os.environ['DATABASE_URL'] = 'postgres://localhost:5432'
+else:
+	os.environ['DATABASE_URL'] = 'postgres://tzlbdqonwabfwn:gr-ukyEwHidOs6CGWOudrwHhOa@ec2-54-217-202-108.eu-west-1.compute.amazonaws.com:5432/da1cn5233q44ih'
 	
 SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_URL')
 
