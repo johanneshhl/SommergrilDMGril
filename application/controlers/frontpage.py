@@ -12,8 +12,45 @@ def index():
 		Ellers hvis "spalshpage", hvor man kan oprette bruger og logge ind
 
 	'''
-	if g.userIsloggedIn == True:
-		return render_template('pages/forside.jinja')
-	else: 
-		return render_template('pages/splashpage.jinja')
 
+	return render_template('forside.html')
+
+
+@app.route('/opskrifter')
+def opskrifter():
+
+
+	'''
+		Hvis brugeren er logget ind, hvis forside
+		Ellers hvis "spalshpage", hvor man kan oprette bruger og logge ind
+
+	'''
+
+	return render_template('opskrifter.html')
+
+
+
+@app.route('/gril')
+def gril():
+
+
+	'''
+		Hvis brugeren er logget ind, hvis forside
+		Ellers hvis "spalshpage", hvor man kan oprette bruger og logge ind
+
+	'''
+
+	return render_template('gril.html')
+
+
+@app.route('/produkter')
+def produkter():
+
+
+	'''
+		Hvis brugeren er logget ind, hvis forside
+		Ellers hvis "spalshpage", hvor man kan oprette bruger og logge ind
+
+	'''
+
+	return render_template('produkter.html')

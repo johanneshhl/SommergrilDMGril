@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dan-sukker - Grønt til grillen</title>
+	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,600,300italic,600italic|Crimson+Text:400,600italic,600,400italic' rel='stylesheet' type='text/css'>
+	<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='assets/main.css') }}">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+</head>
+<body>
+	<nav>
+	<ul>
+		<li><a href="/">Forside</a></li>
+		<li><a href="/opskrifter">Grønt til grillen</a></li>
+		<li><a href="/gril">Grillretter</a></li>
+		<li><a href="/produkter">Produkter fra Dansukker</a></li>
+		<li><a href="/bestil">Bestil matriale</a></li>
+	</ul>
+	</nav>
+	<div data-func="menutoggle" class="toggle">
+		<div class="streg"></div>
+		<div class="streg"></div>
+		<div class="streg"></div>
+	</div>
+	<div class="main">
+		<section class="hero opskrift">
+			<div class="hero-cirkel-continer">
+				<div class="hero-cirkel">
+				<img src="{{ url_for('static', filename='assets/billeder/logo.svg') }}">
+					<h1>Grønt til <br />Grilllen</h1>
+				</div>
+			</div>
+		</section>
+		<section class="opskrifter">
+			<ul>
+				{% raw %}
+				<li data-func="vis-opskrift" data-content='{"title":"Bønnesalsa","lists":[{"title":"Ingredienser","content":["1 mango i tern","1 rødløg i tern","2 tomater i tern","1 dåse røde bønner","1 spsk. finthakket rød chili","1 spsk. Dansukker Muscovadosirup","2 spsk. mørk balsamicovineddike","2 spsk. olie","1 spsk. friskpresset citronsaft","2 knsp. salt","2 knsp. groftmalet sort peber","½ dl hakket, frisk basilikum"]}],"metod":"Skyl bønnerne i koldt vand, og lad dem dryppe af. Bland bønnerne med de øvrige ingredienser, og stil det koldt et par timer. Server salsaen til grillet kød eller pølser."}'> 
+				{% endraw %}
+		<img src="{{ url_for('static', filename='assets/billeder/gront/bonne_salat.jpg') }}">
+		<p>Bønnesalsa<br/><small>4 portioner</small></p>
+	</li>
+
+
+
+{% raw %}
+<li data-func="vis-opskrift" data-content='{"title":"Agurkesalat med basilikum og rød chill","lists":[{"title":"Ingredienser","content":["1 mango i tern"]},{"title":"Dressing","content":["1 spsk. Dansukker Muscovadosirup","1 spsk. finthakket basilikum","2 spsk. finthakket rød chili","2 spsk. friskpresset citronsaft","2 knsp. salt","2 knsp. sort peber"]}],"metod":"Skræl og halver agurken, og fjern kernerne. Skær agurken i centimetertykke skiver. Bland alle ingredienserne til dressingen i en skål. Tilsæt agurk og rør rundt. Stil salaten koldt indtil serveringen."}'> 
+{% endraw %}
+<img src="{{ url_for('static', filename='assets/billeder/gront/agurk_salat.jpg') }}">
+<p>Agurkesalat med basilikum og rød chill<br/><small>4 portioner</small></p>
+</li>
+
+
+{% raw %}
+<li data-func="vis-opskrift" data-content='{"title":"Kartoffelsalat med karry","lists":[{"title":"Ingredienser","content":["1 kg kogte kartofler ","2 røde æbler","1 rødløg","3 salatløg"]},{"title":"Sauce","content":["1 1/2 dl mayonnaise ","1 1/2 dl tyrkisk yoghurt","1 spsk. Dansukker Muscovadosirup","1 dl hakket agurkesalat","1 spsk. karryevt. salt, peber"]}],"metod":"Bland alle ingredienserne til saucen i en skål. Skyl æblerne godt, skær dem i både, og fjern kernehuset. Skær dem i mindre stykker. Rør æblestykkerne i saucen. Pil kartoflerne, og skær dem i stykker. Bland kartoflerne i saucen. Pil rødløget, skær det i tern, og vend det i salaten. Skyl salatløgene, og skær dem i tynde ringe. Smag til, og tilsæt evt. salt og peber. Stil salaten i køleskab indtil serveringen."}'> 
+{% endraw %}
+<img src="{{ url_for('static', filename='assets/billeder/gront/karry_kartoffel_salat.jpg') }}">
+<p>Kartoffelsalat med karry<br/><small>4-6 portioner</small></p>
+</li>
+
+
+{% raw %}
+<li data-func="vis-opskrift" data-content='{"title":"Tomat- og mozarellasalat","lists":[{"title":"Ingredienser","content":["4-8 tomater","125 g mozzarella","100 g rød bladbede"]},{"title":"Dressing","content":["1 spsk. Dansukker Muscovadosirup","2 spsk. olivenolie","2 spsk. balsamicovineddike","1 spsk. friskpresset citronsaft","1 knsp. salt","1 knsp. sort peber"]}],"metod":"Bland alle ingredienserne til saucen i en skål. Skyl æblerne godt, skær dem i både, og fjern kernehuset. Skær dem i mindre stykker. Rør æblestykkerne i saucen. Pil kartoflerne, og skær dem i stykker. Bland kartoflerne i saucen. Pil rødløget, skær det i tern, og vend det i salaten. Skyl salatløgene, og skær dem i tynde ringe. Smag til, og tilsæt evt. salt og peber. Stil salaten i køleskab indtil serveringen."}'> 
+{% endraw %}
+<img src="{{ url_for('static', filename='assets/billeder/gront/tomat_og_mozzarella_salat.jpg') }}">
+<p>Tomat- og mozarellasalat<br/><small>4 portioner</small></p>
+</li>
+
+{% raw %}
+<li data-func="vis-opskrift" data-content='{"title":"Muscovadokartofler","lists":[{"title":"Ingredienser","content":["1 kg kartofler","1/2 - 3/4 dl Dansukker Muscovadosirup","Salt, peber","Smør eller margarine til stegning"]}],"metod":"Skræl og kog kartoflerne i letsaltet vand. Hæld vandet fra, damp kartoflerne. Smelt fedtstoffet på en pande, og tilsæt kartofler og sirup. Steg kartoflerne gyldenbrune. Krydr med salt og peber. Serveres til f.eks.  <a href=\"http://www.dansukker.dk/dk/opskrifter/kotelet-med-vildtsmag.aspx\">koteletterne med vildtsmag</a>."}'> 
+{% endraw %}
+<img src="{{ url_for('static', filename='assets/billeder/gront/kartofler.jpg') }}">
+<p>Muscovadokartofler<br/><small>4 portioner</small></p>
+</li>
+
+</ul>
+</section>
+	<footer>
+		<button data-func="showNewsLetterSignUp" href="#">Skriv dig op til vores nyhedbrev</button>
+		
+	</footer>
+
+</div>
+
+  <script src="{{ url_for('static', filename='assets/js/jquery.slides.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='assets/js/main.js') }}"></script>
+</body>
+</html>

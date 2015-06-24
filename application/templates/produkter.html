@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dan-sukker - Produkter</title>
+	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,600,300italic,600italic|Crimson+Text:400,600italic,600,400italic' rel='stylesheet' type='text/css'>
+	<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='assets/main.css') }}">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+</head>
+<body>
+	<nav>
+<ul>
+		<li><a href="/">Forside</a></li>
+		<li><a href="/opskrifter">Grønt til grillen</a></li>
+		<li><a href="/gril">Grillretter</a></li>
+		<li><a href="/produkter">Produkter fra Dansukker</a></li>
+		<li><a href="/bestil">Bestil matriale</a></li>
+	</ul>
+	</nav>
+	<div data-func="menutoggle" class="toggle">
+		<div class="streg"></div>
+		<div class="streg"></div>
+		<div class="streg"></div>
+	</div>
+	<div class="main">
+		<section class="hero produkter">
+			<div class="hero-cirkel-continer">
+				<div class="hero-cirkel">
+					<img src="{{ url_for('static', filename='assets/billeder/logo.svg') }}">
+					<h1>Produkter fra Dansukker</h1>
+				</div>
+			</div>
+		</section>
+		<section class="end">
+		<div class="text-box">
+				<h2><i>Opdag sukkerets store smagsverden</i></h2>	
+				<p><i>Sukker er en smagsgiver og en smagsforstærker, som er overraskende, vigtig og rig på nuancer. Vi har udarbejdet en guide for de af vores produkter, som har en karakte­ ristisk smag ud over den rene søde smag. Guiden viser sukkerets smags­intensitet og smagstype. Dermed bli­ver det lettere for dig at vælge mellem vores sukkerprodukter og få inspira­tion til nye smagskombinationer, både når du bager og laver mad.</i></p>
+				<p><i>Prøv eksempelvis at rulle en choko ladetrøffel i forskellige slags sukker eller erstat det almindelige sukker i kagen med noget mere spændende. Ved hjælp af vores smagscirkler får du et billede af sukkers forskellige smagsnuancer og af smagens intensitet.</i></p>
+		</div>
+		</section>
+
+		<section class="intro intro-2 opskrifter">
+			<ul>
+			<li data-func="vis-produkt" data-content='{
+	"title":"Brun Farin",
+	"desc": "Brun Farin, eller puddersukker som det tidligere blev kaldt, er en blanding af sukker og rørsukkersirup. Brun Farin anvendes bl.a. i Irish Coffee, som drys på ymer, til glasering på skinker og oven på kager, f.eks. brunsviger. Brun Farin er velegnet til madlavning, fordi den lidt specielle, krydrede aroma passer godt til smagen i bl.a. etnisk mad. Brun Farin får desuden smagen af de øvrige råvarer og krydderier til at træde tydeligere frem.<br/><br/>Mål og vægt: Brun Farin <br/>1 dl = ca. 75 g <br/>1 spsk = ca. 13 g <br/>1 tsk = ca. 4 g<br/><br/><img src=\"{{ url_for('static', filename='assets/billeder/produkter/SmagsCirkel_brunFarin.png') }}\"/>"}'> 
+				<img src="{{ url_for('static', filename='assets/billeder/produkter/Brun_Farin 2000g.94352017.jpg') }}">
+				<p>Brun Farin</p>
+			</li>
+
+			<li data-func="vis-produkt" data-content='{
+	"title":"Muscovadosirup",
+	"desc": "Muscovadosirup fremstilles af sukkerrør som vokser på Mauritius i det Indiske Ocean. Det er en mørk og smagfuld sirup som har en fin eftersmag af lakrids. Den praktiske flaske gør det nemt at opbevare og dosere. Muscovadosirup er Fairtrade-mærket.<br/>Muscovadosirup har mange forskellige anvendelsesmuligheder. Den er særdeles velegnet som topping på is og frisk frugt samt til desserter. I madretter er den perfekt som smagsforstærker men også god som krydderi.<br/><br/><img src=\"{{ url_for('static', filename='assets/billeder/produkter/SmagsCirkel_muscovadoSirup.png') }}\"/>"}'> 
+				<img src="{{ url_for('static', filename='assets/billeder/produkter/Muscovado_Sirap_Fairtrade 400g.muscovado.jpg') }}">
+				<p>Muscovadosirup</p>
+			</li>
+		<li data-func="vis-produkt" data-content='{
+	"title":"Lys Muscovadorørsukker",
+	"desc": "Muscovadorørsukker har sin oprindelse på Mauritius og udvindes af sukkerrør. Sukkeret forarbejdet så lidt som muligt for at bevare aromaen og farven. Der findes både Lys og Mørk Muscovadorørsukker. Smagen af det lyse sukker minder lidt om flødekaramel, og det mørke har et strejf af lakridssmag. Mørk Muscovadorørsukker passer fint i sovse, marinader, chutney, chokoladekager, chokoladedrikke og is.<br/>Lys Muscovadorørsukker kan med fordel anvendes som krydderi til madlavning. Passer godt til fisk og rodfrugter. Forstærker smagen i brød, dessertkager, småkager, desserter, marinader, sovse og henkogninger.<br/>Dansukker Muscovadorørsukker er Fairtrade-mærket.<br/><br/>Mål og vægt: Muscovadorørsukker<br/>1 dl = ca. 95 g<br/>1 spsk = ca. 15 g<br/>1 tsk = ca. 5 g<br/><br/><img src=\"{{ url_for('static', filename='assets/billeder/produkter/SagsCirkel_lys_muscovado.jpg') }}\"/>"}'> 
+				<img src="{{ url_for('static', filename='assets/billeder/produkter/Ljust_Muscovadorasocker 500g.94435611.jpg') }}">
+				<p>Lys Muscovadorørsukker</p>
+			</li>
+		<li data-func="vis-produkt" data-content='{
+	"title":"Mørk Muscovadorørsukker",
+	"desc": "Muscovadorørsukker har sin oprindelse på Mauritius og udvindes af sukkerrør. Sukkeret forarbejdet så lidt som muligt for at bevare aromaen og farven.<br/>Der findes både Lys og Mørk Muscovadorørsukker. Smagen af det lyse sukker minder lidt om flødekaramel, og det mørke har et strejf af lakridssmag.<br/>Mørk Muscovadorørsukker passer fint i sovse, marinader, chutney, chokoladekager, chokoladedrikke og is.<br/>Lys Muscovadorørsukker kan med fordel anvendes som krydderi til madlavning. Passer godt til fisk og rodfrugter. Forstærker smagen i brød, dessertkager, småkager, desserter, marinader, sovse og henkogninger.<br/>Dansukker Muscovadorørsukker er Fairtrade-mærket.<br/><br/>Mål og vægt: Muscovadorørsukker<br/>1 dl = ca. 95 g<br/>1 spsk = ca. 15 g<br/>1 tsk = ca. 5 g<br/><br/><img src=\"{{ url_for('static', filename='assets/billeder/produkter/SagsCirkel_mork_muscovado.jpg') }}\"/>"}'> 
+				<img src="{{ url_for('static', filename='assets/billeder/produkter/Morkt_Muscovadorasocker 500g.94435609.jpg') }}">
+				<p>Mørk Muscovadorørsukker</p>
+			</li>
+
+		<li data-func="vis-produkt" data-content='{
+	"title":"Muscovadosirup",
+	"desc": "<b>Sirupsfamilien har fået endnu et smagfuldt medlem – Muscovadosirup!</b><br/>Muscovadosirup fremstilles af sukkerrør som vokser på Mauritius i det Indiske Ocean. Det er en mørk og smagfuld sirup som har en fin eftersmag af lakrids. Den praktiske flaske gør det nemt at opbevare og dosere. Muscovadosirup er Fairtrade-mærket.<br/>Muscovadosirup har mange forskellige anvendelsesmuligheder. Den er særdeles velegnet som topping på is og frisk frugt samt til desserter. I madretter er den perfekt som smagsforstærker men også god som krydderi.<br/><br/><img src=\"{{ url_for('static', filename='assets/billeder/produkter/SmagsCirkel_muscovadoSirup.png') }}\"/>"}'> 
+				<img src="{{ url_for('static', filename='assets/billeder/produkter/Cane_Syrup 400g.94379925.jpg') }}">
+				<p>Muscovadosirup</p>
+			</li>
+
+
+</ul>
+</section>
+	<footer>
+		<button data-func="showNewsLetterSignUp" href="#">Skriv dig op til vores nyhedbrev</button>
+		
+	</footer>
+
+</div>
+
+  <script src="{{ url_for('static', filename='assets/js/jquery.slides.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='assets/js/main.js') }}"></script>
+</body>
+</html>

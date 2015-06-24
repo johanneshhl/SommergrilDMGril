@@ -20,16 +20,7 @@ app.jinja_env.trim_blocks = True
 app.jinja_env.lstrip_blocks = True
 
 
-# Find filer der skal minifierser
-js = Bundle('assets/jquery.min.js','assets/bifrost.js', 'assets/main.js', filters='jsmin', output='gen/packed.js')
-css = Bundle('assets/main.css',  filters='cssmin', output='gen/packed.css')
-
-# Hent de minifiserde filer
-assets.register('js_all', js)
-assets.register('css_all', css)
-
 import application.database
-
 import application.controlers
 import application.models
 

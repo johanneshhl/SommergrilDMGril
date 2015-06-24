@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dan-sukker - Grillretter</title>
+	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,600,300italic,600italic|Crimson+Text:400,600italic,600,400italic' rel='stylesheet' type='text/css'>
+	<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='assets/main.css') }}">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+<body>
+	<nav>
+		<ul>
+			<li><a href="/">Forside</a></li>
+			<li><a href="/opskrifter">Grønt til grillen</a></li>
+			<li><a href="/gril">Grillretter</a></li>
+			<li><a href="/produkter">Produkter fra Dansukker</a></li>
+			<li><a href="/bestil">Bestil matriale</a></li>
+		</ul>
+	</nav>
+	<div data-func="menutoggle" class="toggle">
+		<div class="streg"></div>
+		<div class="streg"></div>
+		<div class="streg"></div>
+	</div>
+	<div class="main">
+		<section class="hero gril">
+			<div class="hero-cirkel-continer">
+				<div class="hero-cirkel">
+					<img src="{{ url_for('static', filename='assets/billeder/logo.svg') }}">
+					<h1>Grillretter</h1>
+				</div>
+			</div>
+		</section>
+		<section class="opskrifter">
+			<ul>
+
+{% raw %}
+<li data-func="vis-opskrift" data-content='{"title":"Bøffelburgere","lists":[{"title":"Ingredienser","content":["1 kg meget mager oksefars","1 finthakket zittauerløg","2 spsk rapsolie","2 tsk Dansukker Rørsukker","¼ dl finthakket mynte","1 tsk knust grønt peber","¼ dl sojasauce","2 æg"]},{"title":"Tilbehør","content":["brød","salat","løg","tomat","eller hvad du end har lyst til"]}],"metod":"Svits løg og rørsukker i olie. Lad det køle af. Rør ingredienserne sammen til burgerne. Form otte burgere af massen. Smør lidt olie på hænderne, så er de lettere at forme.<br/>Grill burgerne et par minutter på hver side."}'>
+{% endraw %}
+		<img src="{{ url_for('static', filename='assets/billeder/gril/boffelburger.jpg') }}">
+		<p>Bøffelburgere<br/><small>4 portioner</small></p>
+	</li>
+
+
+{% raw %}
+<li data-func="vis-opskrift" data-content='{"title":"Cubanske koteletter","lists":[{"title":"Ingredienser","content":["4 svinekoteletter eller 8 dobbelte lammekoteletter","Krydderiblanding","2 tsk. chilipulver","1 knsp. cayennepeber","1 knsp. stødt nellike","1 knsp. stødt allehånde","1 knsp. spidskommen ","1 knsp. kanel ","2 tsk. Dansukker Rørsukker","3 spsk. Olie "]},{"title":"Salsa","content":["1 mango","1 papaya","3-4 tomater","2 spsk. Dansukker Lys Sirup","2 tsk. hvid balsamicovineddike","1 revet eller finthakket fed hvidløg ","1/4 rød chili","1 spsk. finthakket, frisk basilikum"]}],"metod":"Bland ingredienserne til krydderiblandingen. Pensl blandingen på kødet. Stil retten i køleskab i 3-4 timer. Grill koteletterne i 3-4 minutter på hver side, lidt kortere tid for lammekoteletterne.<br/>Skræl frugterne, og skær frugtkødet i små tern. Del tomaterne, og fjern kernerne. Skær tomatkødet i tern. Fjern kernerne i chilien, og skær den i meget små tern. Bland ingredienserne til salsaen, og lad blandingen trække i køleskab i et par timer."}'>
+{% endraw %}
+
+		<img src="{{ url_for('static', filename='assets/billeder/gril/cuba_koletter.jpg') }}">
+		<p>Cubanske koteletter<br/><small>4 portioner</small></p>
+	</li>
+
+
+
+{% raw %}
+<li data-func="vis-opskrift" data-content='{"title":"Asiatisk dijon- og muscovadolaks","lists":[{"title":"Ingredienser","content":["4 stykker laksefilet (ca. 500 g)","4 spsk. Dansukker Muscovadosirup","2 spsk. grovkornet sennep","1 spsk. dijonsennep","1 spsk. hvid misopasta (pasta af sojabønner)","1 spsk. risvineddike","2 tsk. lys soja","1 fed hakket hvidløg"]}],"metod":"Bland muscovadosirup, sennep, misopasta, vineddike, soja og hvidløg i en skål. Læg laksefileterne i, og lad dem marinere i mindst 30 minutter.<br/>Anbring laksen i et ovnfast fad, og steg i ovnen i ca. 10 minutter ved 200 °C. Laksefileterne er også velegnet til grilning, men husk da at tørre overflødig glasering fra fisken væk inden grilningen."}'>
+{% endraw %}
+		<img src="{{ url_for('static', filename='assets/billeder/gril/laks_asiatisk.jpg') }}">
+		<p>Asiatisk dijon- og muscovadolaks<br/><small>4 portioner</small></p>
+	</li>
+
+
+
+
+{% raw %}
+<li data-func="vis-opskrift" data-content='{"title":"Rejespyd med limesmør","lists":[{"title":"Ingredienser","content":["24-48 afskallede rejer, afhængigt af størrelse","8 træspyd","Kryddersmør","150 g usaltet smør","½ dl tør hvidvin","saft og skal af 1 lime","1 tsk. Dansukker Brun Farin","1 spsk. revet zittauerløg"]},{"title":"Serveres med","content":["lime","persille eller koriander"]}],"metod":"Bland smør, hvidvin, lime, farin og løg sammen til kryddersmør. Anvend en elpisker. Sæt rejerne på spiddene. Pensl rejerne med kryddersmørret, og lad dem stå i køleskabet i en time, inden de grilles et minut på hver side.Læg dem på varme tallerkener sammen med det overskydende kryddersmør, limebåde og persille eller koriander. Spises med det samme."}'> 
+{% endraw %}	
+	<img src="{{ url_for('static', filename='assets/billeder/gril/laksespyd.jpg') }}">
+		<p>Rejespyd med limesmør<br/><small>4 portioner</small></p>
+	</li>
+
+{% raw %}
+<li data-func="vis-opskrift" data-content='{"title":"Marokkansk kylling","lists":[{"title":"Ingredienser","content":["4 kyllingefileterMarinade","1 1/2 dl friskpresset citronsaft","1/2 dl olivenolie","2 spsk. Dansukker Brun Farin","1 tsk revet, fersk ingefær","2 tsk. harissa"]}],"metod":"Bland alle ingredienserne til marinaden i en kraftig plasticpose. Læg kyllingefileterne i, og luk posen igen. Ryst posen. Lad hvile i køleskab i 1 time.Grilles til kødet er gennemstegt. Serveres med f.eks. agurkesalat og tabbouleh."}'> 
+{% endraw %}	
+		<img src="{{ url_for('static', filename='assets/billeder/gril/Lylling_marokko.jpg') }}">
+		<p>Asiatisk dijon- og muscovadolaks<br/><small>4 portioner</small></p>
+	</li>
+
+
+
+</ul>
+</section>
+	<footer>
+		<button data-func="showNewsLetterSignUp" href="#">Skriv dig op til vores nyhedbrev</button>
+		
+	</footer>
+
+</div>
+
+  <script src="{{ url_for('static', filename='assets/js/jquery.slides.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='assets/js/main.js') }}"></script>
+</body>
+</html>

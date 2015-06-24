@@ -7,3 +7,35 @@ import datetime
 
 
 
+
+class newsLetterEmail(db.Model):
+	
+	id = db.Column(db.Integer, primary_key=True)
+	email = db.Column(db.String(128), nullable=False, unique=True)
+
+
+	def __init__(self, email):
+		self.email = email
+
+	def __repr__(self):
+		return '<User %r>' % self.id
+
+
+
+
+class userContact(db.Model):
+	
+	id = db.Column(db.Integer, primary_key=True)
+	name = db.Column(db.String(256), nullable=False)
+	email = db.Column(db.String(128), nullable=False, unique=True)
+	phonenumber = db.Column(db.String(8), nullable=False)
+
+
+	def __init__(self, name, email, phonenumber):
+		self.name = name
+		self.email = email
+		self.phonenumber = phonenumber
+
+	def __repr__(self):
+		return '<User %r>' % self.id
+
