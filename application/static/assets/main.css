@@ -515,11 +515,20 @@ body .popup {
         margin-top: 50px;
         float: right; }
     body .popup .inner .text-box {
-      max-height: 700px;
+      max-height: 400px;
       overflow: scroll;
       height: 100%;
       width: 100%;
       padding: 20px; }
+      @media screen and (min-width: 650px) and (max-width: 1200px) {
+        body .popup .inner .text-box {
+          max-height: 700px; } }
+      @media screen and (min-width: 1201px) and (max-width: 1400px) {
+        body .popup .inner .text-box {
+          max-height: 800px; } }
+      @media screen and (min-width: 1401px) {
+        body .popup .inner .text-box {
+          max-height: 800px; } }
       body .popup .inner .text-box div.row {
         float: left;
         display: block;
