@@ -54,3 +54,18 @@ def produkter():
 	'''
 
 	return render_template('produkter.html')
+
+
+
+
+@app.route('/bestil')
+def bestil():
+
+
+	'''
+		Hvis brugeren er logget ind, hvis forside
+		Ellers hvis "spalshpage", hvor man kan oprette bruger og logge ind
+
+	'''
+
+	return render_template('bestil.html')
