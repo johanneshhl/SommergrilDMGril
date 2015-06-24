@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dan-sukker - Produkter</title>
+	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,600,300italic,600italic|Crimson+Text:400,600italic,600,400italic' rel='stylesheet' type='text/css'>
+	<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='assets/main.css') }}">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+</head>
+<body>
+	<nav>
+<ul>
+		<li><a href="/">Forside</a></li>
+		<li><a href="/opskrifter">Grønt til grillen</a></li>
+		<li><a href="/gril">Grillretter</a></li>
+		<li><a href="/produkter">Produkter fra Dansukker</a></li>
+		<li><a href="/bestil">Bestil matriale</a></li>
+	</ul>
+	</nav>
+	<div data-func="menutoggle" class="toggle">
+		<div class="streg"></div>
+		<div class="streg"></div>
+		<div class="streg"></div>
+	</div>
+	<div class="main">
+	<section class="opskrifter">
+		<ul>
+				{% for name, src in [('Grill Party', 'grill_party_dk'),
+								 ('Lidt godt til grillen', 'lidt_godt_til_grillen_dk'),
+        		                 ('Opdag sukkerets store smagsverden', 'opdag_sukkerets_store_smagsverden'),
+        		                 ('Fysisk aktivitet og vægt', 'phys_act_dk'),
+        		                 ('Sæt ekstra smag på grillfesten', 'saet_ekstra_smag_pa_grillfesten_dk'),
+        		                 ('Om sukker og sunhed', 'sukker_sundhed_dk')] %}
+        			<li><a href="{{ url_for('static', filename='assets/billeder/pdf/'+src+'.pdf') }}">
+        				<img src="{{ url_for('static', filename='assets/billeder/pdf-img/'+src+'.jpeg') }}"/>
+        				<p>{{ name }}</p>
+        			</a></li>
+    			{% endfor %}
+		</ul>
+	</section>
+	<footer>
+		<button data-func="showNewsLetterSignUp" href="#">Skriv dig op til vores nyhedbrev</button>
+		
+	</footer>
+
+</div>
+
+  <script src="{{ url_for('static', filename='assets/js/jquery.slides.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='assets/js/main.js') }}"></script>
+</body>
+</html>

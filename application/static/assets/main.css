@@ -850,13 +850,40 @@ a {
     float: left;
     display: block;
     margin-right: 2.35765%;
-    width: 65.88078%;
-    margin-left: 17.05961%;
+    width: 100%;
+    margin-left: 0%;
     -webkit-box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.2);
     -moz-box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.2);
     box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.2); }
     .end .container:last-child {
       margin-right: 0; }
+    @media screen and (min-width: 650px) and (max-width: 1200px) {
+      .end .container {
+        float: left;
+        display: block;
+        margin-right: 2.35765%;
+        width: 82.94039%;
+        margin-left: 8.5298%; }
+        .end .container:last-child {
+          margin-right: 0; } }
+    @media screen and (min-width: 1201px) and (max-width: 1400px) {
+      .end .container {
+        float: left;
+        display: block;
+        margin-right: 2.35765%;
+        width: 65.88078%;
+        margin-left: 17.05961%; }
+        .end .container:last-child {
+          margin-right: 0; } }
+    @media screen and (min-width: 1401px) {
+      .end .container {
+        float: left;
+        display: block;
+        margin-right: 2.35765%;
+        width: 65.88078%;
+        margin-left: 17.05961%; }
+        .end .container:last-child {
+          margin-right: 0; } }
     .end .container button {
       float: right;
       min-width: 250px; }
