@@ -27,8 +27,8 @@ class userContact(db.Model):
 	
 	id = db.Column(db.Integer, primary_key=True)
 	name = db.Column(db.String(256), nullable=False)
-	email = db.Column(db.String(128), nullable=False, unique=True)
-	phonenumber = db.Column(db.String(8), nullable=False)
+	email = db.Column(db.String(128), nullable=False)
+	phonenumber = db.Column(db.String(54), nullable=False)
 
 
 	def __init__(self, name, email, phonenumber):
