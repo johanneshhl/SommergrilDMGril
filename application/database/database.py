@@ -37,5 +37,5 @@ class userContact(db.Model):
 		self.phonenumber = phonenumber
 
 	def __repr__(self):
-		return '<User %r>' % self.id
+		return '<userContact %r>' % self.id
 
