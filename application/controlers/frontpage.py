@@ -109,3 +109,41 @@ def order():
 
 
 	return redirect(url_for('bestilDownload'))
+
+
+
+
+
+@app.route('/admin')
+def admin():
+
+	breve = newsLetterEmail.query.all()
+	bruger = userContact.query.all()
+
+	return render_template('admin.html', newsletters=breve, orders=bruger)
+
+
+
+
+
+@app.route('/session/delete/newsletter/<int:id>')
+def deleteNewsletter(id):
+	
+	brev = newsLetterEmail.query.filter_by(id=id).first()
+
+	db.session.delete(brev)
+	db.session.commit()
+
+	return redirect(url_for('admin'))
+
+
+
+@app.route('/session/delete/order/<int:id>')
+def deleteOrder(id):
+	
+	bestilling = userContact.query.filter_by(id=id).first()
+
+	db.session.delete(bestilling)
+	db.session.commit()
+
+	return redirect(url_for('admin'))
