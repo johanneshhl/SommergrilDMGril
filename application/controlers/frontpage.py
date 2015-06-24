@@ -75,13 +75,8 @@ def bestil():
 @app.route('/bestil/download')
 def bestilDownload():
 
-	if 'documents' in session:
-		return render_template('pdfer.html')
 
-	else: 
-		return redirect(url_for('bestil'))
-
-
+	return render_template('pdfer.html')
 
 
 
